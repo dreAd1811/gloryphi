@@ -141,7 +141,6 @@ h1 {
 .navbar {
   padding-left: 40px !important;
   gap: 450px;
-  backdrop-filter: blur(5px);
 }
 
 .gradient-custom {
