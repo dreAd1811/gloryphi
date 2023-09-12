@@ -1,5 +1,7 @@
 /* Custom cursor */
 
+
+
 .cursor {
     width: 20px;
     height: 20px;
@@ -15,7 +17,7 @@
   }
 
   
-*{
+  *, *:after, *:before , *:hover{
   cursor: none;
 }
 

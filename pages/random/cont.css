@@ -155,14 +155,13 @@
   .navbar {
     padding-left: 40px !important;
     gap: 450px;
-    backdrop-filter: blur(5px);
   }
   
   .gradient-custom {
     /* fallback for old browsers */
     background: transparent;
-  
   }
+  
   
   #sec1 {
     height: 100%;
