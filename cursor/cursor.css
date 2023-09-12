@@ -18,6 +18,6 @@
 
   
   *, *:after, *:before , *:hover{
-  cursor: none;
+  cursor: default;
 }
 

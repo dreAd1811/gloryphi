@@ -123,4 +123,8 @@
     height: 90%;
     background: transparent;
   }
+
+  li {
+    list-style-type: none !important;
+  }
   
