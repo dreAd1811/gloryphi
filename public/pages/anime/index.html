@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Glory Anime</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.css" />
+    <link rel="stylesheet" href="/pages/anime/styles.css">
+    <link rel="stylesheet" href="/cursor/cursor.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <link rel="stylesheet" href="/pages/anime/style.css">
+</head>
+
+<body>
+    <nav
+        class="navbar transparent fixed-top gradient-custom justify-content-center navbar-expand-lg  p-2  bg-transparent">
+        <nav class="navbar-inner">
+            <nav class="navbar">
+                <a class="navbar-brand text-gradient" href="/">
+                    Glory
+                </a>
+            </nav>
+            <div id="nav1">
+                <div id="coll">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active text-gradient">
+                                <a class="nav-link text-gradient" href="/">Home</a>
+                            </li>
+                            <li class="nav-item active text-gradient">
+                                <a class="nav-link" href="/random">Random Stuff</a>
+                            </li>
+                            <li class="nav-item active text-gradient">
+                                <a class="nav-link" href="/image-gen">Image Generator</a>
+                            </li>
+                            <li class="nav-item active text-gradient">
+                                <a class="nav-link" href="/anime">Anime</a>
+                            </li>
+                    </div>
+                </div>
+                <li class="nav-item active text-gradient">
+                    <div class="clock">
+                        <span id="datep">12/12/12</span>
+                        <span id="hrs" class="nav-link">00</span>
+                        <span class="nav-link">:</span>
+                        <span id="min" class="nav-link">00</span>
+                        <span class="nav-link">:</span>
+                        <span id="sec" class="nav-link">00</span>
+
+                </li>
+                </ul>
+
+            </div>
+            </div>
+        </nav>
+    </nav>
+    <div class="cursor"></div>
+    <div id="fullpage">
+        <!-- Section 1 -->
+
+        <div class="section">
+            <div class="section1">
+                <div class="subsec1">
+            <input type="text" id="inp" value="" placeholder="Enter Anime Name">
+            <button id="btn1">Search</button>
+        </div>
+            <div class="grid-container" id="anime-list">
+                <!-- Anime data will be displayed here -->
+            </div>
+        </div>
+        </div>
+
+        <!-- Section 1 End  -->
+<!-- ---------------------------------------------------------------------------------------------------------------------- -->
+        <!-- Section 2 -->
+        <div class="section ">
+
+            <div class="section2">
+            <div class="subsec2">
+            <p class="note">Copy the Anime ID Above and paste it here</p>
+            <!-- Input text box to enter the anime name -->
+            <input type="text" id="animeName" placeholder="Enter Anime ID">
+
+            <!-- Input text box to enter the episode number -->
+            <input type="text" id="episodeNumber" placeholder="Enter Episode Number">
+
+            <!-- Button to update the URL and send the request -->
+            <button id="updateButton">Watch</button>
+        </div>
+
+            <video id="my-video" class="video-js" controls width="720" height="480">
+                <source src="" type="application/x-mpegURL" autoplay>
+            </video>
+        </div>
+        </div>
+        <!-- Section 2 End  -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+</body>
+
+
+<script src="cursor/cursor.js"></script>
+<script src="/script.js"></script>
+<script src="/pages/anime/main.js"></script>
+
+</html>

@@ -1,0 +1,166 @@
+/* styles.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.grid-item {
+    padding: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    color: black !important;
+    border-radius: 30px;
+}
+
+.navbar {
+    padding-left: 40px !important;
+    gap: 450px;
+}
+
+.navbar-inner {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    background-color: #ffffff;
+    background: transparent;
+    font-family: Volkswagen-Bold;
+
+}
+
+#nav1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 20px;
+  }
+
+
+    .clock{
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+        float: right;
+        flex: 1;
+        margin-left: auto;
+        padding: 10px ;
+      }
+
+.section2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100% !important;
+    width: 100%;
+    background-color: gold ;
+    gap: 20px;
+}
+
+.section1{    
+    height: 100% !important;
+    width: 100%;
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%) !important;
+    padding-top: 60px;
+}
+
+.fp-overflow{
+    height: 100% !important;
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.subsec1{
+    display: flex;
+    width: 100%;
+    background: transparent;
+    padding-top: 3%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+button{
+    height: 60px;
+    width: 140px;
+    font-family: Volkswagen-Bold !important;
+    font-size: 25px !important;
+    outline: none;
+    border: none;
+    border-radius: 25px !important;
+    
+}
+
+input{
+    font-family: Volkswagen-Bold;
+    font-size: 25px;
+    width: 350px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    padding-left: 30px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    color: black !important;
+}
+
+.section2{
+    background-image: linear-gradient(
+  45deg,
+  hsl(240deg 100% 20%) 0%,
+  hsl(289deg 100% 21%) 11%,
+  hsl(315deg 100% 27%) 22%,
+  hsl(329deg 100% 36%) 33%,
+  hsl(337deg 100% 43%) 44%,
+  hsl(357deg 91% 59%) 56%,
+  hsl(17deg 100% 59%) 67%,
+  hsl(34deg 100% 53%) 78%,
+  hsl(45deg 100% 50%) 89%,
+  hsl(55deg 100% 50%) 100%
+);
+    justify-content: center;align-items: center;
+    gap: 100px;
+    
+}
+
+input{
+    width: 350px !important;
+}
+
+button{
+    
+        height: 60px;
+        width: 140px;
+}
+
+.subsec2{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+
+.fp-watermark {
+display: none;
+}
+
+canvas{
+    height: 100%;
+}
+
+*,*::after,*::before{
+    cursor: none !important;
+}

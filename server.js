@@ -9,14 +9,19 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-// Route to the about page (about.html)
+// Route to the Random page 
 app.get('/random', (req, res) => {
   res.sendFile(__dirname + '/public/pages/random/index.html');
 });
 
-// Route to the contact page (contact.html)
+// Route to the Image Generator page 
 app.get('/image-gen', (req, res) => {
   res.sendFile(__dirname + '/public/pages/gloryv2/index.html');
+});
+
+// Route to the Anime  page 
+app.get('/anime', (req, res) => {
+  res.sendFile(__dirname + '/public/pages/anime/index.html');
 });
 
 app.listen(port, () => {
