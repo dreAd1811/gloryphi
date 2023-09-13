@@ -223,3 +223,7 @@ p {
 li {
   list-style-type: none !important;
 }
+
+#datep{
+  padding-right: 15px;
+}

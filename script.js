@@ -12,3 +12,15 @@ setInterval(() => {
     sec.innerHTML = (now.getSeconds()<10?"0":"") + now.getSeconds();
 },1000)
 
+let date = now.getDate()
+console.log(date)
+
+
+
+var datee = moment();
+
+var currentDate = datee.format('D/MM/YYYY');
+
+var datep = document.getElementById("datep");
+datep.innerHTML = currentDate;
+console.log(currentDate);

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style1.css">
     <link rel="stylesheet" type="text/css" href="cont.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 
-    <title>Glory V2</title>
+    <title>Glory</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -18,7 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
+
 </head>
 <style>
     *,
@@ -31,43 +32,44 @@
 
 <body>
     <nav
-    class="navbar transparent fixed-top gradient-custom justify-content-center navbar-expand-lg  p-2  bg-transparent">
-    <nav class="navbar-inner">
-        <nav class="navbar">
-            <a class="navbar-brand text-gradient" href="../../index.html" >
-                Glory
-            </a>
-        </nav>
-        <div id="nav1">
-        <div id="coll">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active text-gradient">
-                    <a class="nav-link text-gradient" href="../../index.html" >Home</a>
-                </li>
-                <li class="nav-item active text-gradient">
-                    <a class="nav-link" href="/pages/random/index.html">Random Stuff</a>
-                </li>
-                <li class="nav-item active text-gradient">
-                    <a class="nav-link" href="/pages/gloryv2/index.html">Image Generator</a>
-                </li>
-            </div>
-        </div>
+        class="navbar transparent fixed-top gradient-custom justify-content-center navbar-expand-lg  p-2  bg-transparent">
+        <nav class="navbar-inner">
+            <nav class="navbar">
+                <a class="navbar-brand text-gradient" href="../../index.html">
+                    Glory
+                </a>
+            </nav>
+            <div id="nav1">
+                <div id="coll">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active text-gradient">
+                                <a class="nav-link text-gradient" href="../../index.html">Home</a>
+                            </li>
+                            <li class="nav-item active text-gradient">
+                                <a class="nav-link" href="/pages/random/index.html">Random Stuff</a>
+                            </li>
+                            <li class="nav-item active text-gradient">
+                                <a class="nav-link" href="/pages/gloryv2/index.html">Image Generator</a>
+                            </li>
+                    </div>
+                </div>
                 <li class="nav-item active text-gradient">
                     <div class="clock">
-                    <span id="hrs" class="nav-link">00</span>
-                    <span class="nav-link">:</span>
-                    <span id="min" class="nav-link">00</span>
-                    <span class="nav-link">:</span>
-                    <span id="sec" class="nav-link">00</span>
-                
+                        <span id="datep">12/12/12</span>
+                        <span id="hrs" class="nav-link">00</span>
+                        <span class="nav-link">:</span>
+                        <span id="min" class="nav-link">00</span>
+                        <span class="nav-link">:</span>
+                        <span id="sec" class="nav-link">00</span>
+
                 </li>
-            </ul>
-            
-        </div>
-    </div>
+                </ul>
+
+            </div>
+            </div>
+        </nav>
     </nav>
-</nav>
 
 
     <div id="dot-1" class="glow-dot"></div>
@@ -76,43 +78,40 @@
     <div id="dot-4" class="glow-dot"></div>
     <div id="dot-5" class="glow-dot"></div>
 
-        <!-- Section 1 -->
-        <div id="main" class="section">
-            <div id="cont">
-                <p id="out" class="joke-gradient">Click The Button</p>
-                <p id="out1" class="joke-gradient"></p>
-                <button onclick="randJoke();" id="gen">Jokes</button>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-                <script src="../../vanta/vanta.halo.min.js"></script>
-            </div>
-            <div id="cont2">
-                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/ea6b985b-4f0b-423d-8fd8-8fad165caf2c/dbqa7lp-eeffac3b-5d11-433a-88ea-3b8be694144f.png"
-                    alt="" id="oim" height="270px" width="450px">
-                <button onclick="randMeme();" id="gen">Memes</button>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/fullview/1.1.2/fullview.min.js"
-                    integrity="sha512-X9fAOm6ryDKdsALiTe+WQcXWQyZA/Jp7WUSt7dbDG10EA4kixMDNKexjcOVlnLcA09Gf0r/AHrWZtx+Kb/ydFA=="
-                    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-                    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-                    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-            </div>
+    <!-- Section 1 -->
+    <div id="main" class="section">
+        <div id="cont">
+            <p id="out" class="joke-gradient">Click The Button</p>
+            <p id="out1" class="joke-gradient"></p>
+            <button onclick="randJoke();" id="gen">Jokes</button>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+            <script src="../../vanta/vanta.halo.min.js"></script>
         </div>
-
-        <!-- Section 2 -->
-        <div class=" section sect2">
-
-            <div id="cont">
-                <p id="outp2" class="joke-gradient">Click The Button</p>
-                <p id="outp3" class="joke-gradient"></p>
-                <p id="outp4" class="joke-gradient"></p>
-                <button onclick="randomQuote();" id="gen">Quotes</button>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-            </div>
+        <div id="cont2">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/i/ea6b985b-4f0b-423d-8fd8-8fad165caf2c/dbqa7lp-eeffac3b-5d11-433a-88ea-3b8be694144f.png"
+                alt="" id="oim" height="270px" width="450px">
+            <button onclick="randMeme();" id="gen">Memes</button>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullview/1.1.2/fullview.min.js"
+                integrity="sha512-X9fAOm6ryDKdsALiTe+WQcXWQyZA/Jp7WUSt7dbDG10EA4kixMDNKexjcOVlnLcA09Gf0r/AHrWZtx+Kb/ydFA=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+                integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         </div>
-    
-    
-    <script src="scroll.js"></script>
+    </div>
+
+    <!-- Section 2 -->
+    <div class=" section sect2">
+
+        <div id="cont">
+            <p id="outp2" class="joke-gradient">Click The Button</p>
+            <p id="outp3" class="joke-gradient"></p>
+            <p id="outp4" class="joke-gradient"></p>
+            <button onclick="randomQuote();" id="gen">Quotes</button>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+        </div>
+    </div>
 </body>
 <script src="script.js"></script>
 <script src="../../script.js"></script>
