@@ -52,8 +52,10 @@ const fetchDataAndUpdateVideo = async () => {
             hls.loadSource(url1080p);
             hls.attachMedia(video);
         }
+        document.getElementById("error1").textContent = "";
     } catch (error) {
         console.error(error);
+        document.getElementById("error1").textContent = "Error"
     }
 };
 
@@ -78,7 +80,7 @@ const fetchData = async (searchText) => {
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        const data = await response.json();
+        const data = await response.json(); 
         return data.results; // Extract the "results" array from the response
     } catch (error) {
         throw new Error(error.message);
@@ -92,6 +94,11 @@ const displayData = async () => {
     try {
         const animeData = await fetchData(document.getElementById("inp").value);
 
+        if (animeData.length === 0) {
+            document.getElementById("error3").textContent = "No Anime Found"
+            return; // Exit the function early if no results are found
+        }
+
         // Iterate through the animeData with a limit of 18 items
         for (let i = 0; i < Math.min(maxDivs, animeData.length); i++) {
             const anime = animeData[i];
@@ -100,6 +107,7 @@ const displayData = async () => {
             animeItem.classList.add("grid-item");
             animeItem.innerHTML = `<p>ID: ${anime.id}</p><p>Title: ${anime.title}</p>`;
             animeList.appendChild(animeItem);
+            document.getElementById("error3").textContent = "";
         }
     } catch (error) {
         console.error(error);

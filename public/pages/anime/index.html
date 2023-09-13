@@ -70,6 +70,7 @@
             <input type="text" id="inp" value="" placeholder="Enter Anime Name">
             <button id="btn1">Search</button>
         </div>
+        <p id="error3"></p>
             <div class="grid-container" id="anime-list">
                 <!-- Anime data will be displayed here -->
             </div>
@@ -90,8 +91,12 @@
             <!-- Input text box to enter the episode number -->
             <input type="text" id="episodeNumber" placeholder="Enter Episode Number">
 
+            <p id="error1" style="font-size: 25px; gap: 0px; text-align: center; color: red;"></p>
+
             <!-- Button to update the URL and send the request -->
             <button id="updateButton">Watch</button>
+
+
         </div>
 
             <video id="my-video" class="video-js" controls width="720" height="480">

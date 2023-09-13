@@ -164,3 +164,10 @@ canvas{
 *,*::after,*::before{
     cursor: none !important;
 }
+
+#error3{
+    font-size: 50px;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
