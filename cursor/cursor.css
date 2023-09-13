@@ -1,0 +1,23 @@
+/* Custom cursor */
+
+
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 1);
+    filter: invert(100%);
+    position: absolute;
+    border-radius: 100%;
+    mix-blend-mode: difference;
+    z-index: 100;
+    user-select: none;
+    pointer-events: none;
+    transition: transform ease-out 0.1s;
+  }
+
+  
+  *, *:after, *:before , *:hover{
+  cursor: default;
+}
+

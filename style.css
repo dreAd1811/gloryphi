@@ -1,0 +1,229 @@
+@font-face {
+  font-family: Volkswagen-Bold;
+  src: url(fonts/Volkswagen-Bold.ttf);
+}
+
+canvas {
+  height: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#input1 {
+  height: 60px;
+  width: 305px;
+  border-radius: 40px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border: 2px solid white;
+  padding: 10px 30px;
+  font-size: 30px;
+  font-family: Volkswagen-Bold;
+  color: black;
+  letter-spacing: 1px;
+}
+
+#gen {
+  width: 200px;
+  height: 80px;
+  border-radius: 40px;
+  background-color: transparent;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: Volkswagen-Bold;
+  border: 2px solid white;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+#gen:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #ffffff;
+  color: black;
+  transition: all 0.5s;
+  z-index: -1;
+}
+
+#gen:hover:before {
+  height: 100%;
+}
+
+#gen:hover {
+  color: black;
+}
+
+#cont {
+  padding-bottom: 70px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  border-radius: 30px;
+  padding-top: 100px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+}
+
+#input1::placeholder {
+  color: black;
+
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+#imgb {
+  height: 568px;
+  border-radius: 20px;
+  background-color: transparent;
+  width: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+}
+
+#out {
+  border-radius: 20px;
+}
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+#new {
+  height: 90%;
+  background: transparent;
+}
+
+
+
+h1 {
+  font-family: Volkswagen-Bold;
+  color: white !important;
+  display: flex;
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background-clip: initial;
+}
+
+.navbar {
+  padding-left: 40px !important;
+  gap: 450px;
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: transparent;
+
+}
+
+#sec1 {
+  height: 100%;
+  width: 100%;
+  background: rgb(36, 17, 106);
+  background: -moz-radial-gradient(circle, rgba(36, 17, 106, 1) 7%, rgba(12, 7, 65, 1) 36%, rgba(12, 9, 31, 1) 87%);
+  background: -webkit-radial-gradient(circle, rgba(36, 17, 106, 1) 7%, rgba(12, 7, 65, 1) 36%, rgba(12, 9, 31, 1) 87%);
+  background: radial-gradient(circle, rgba(36, 17, 106, 1) 7%, rgba(12, 7, 65, 1) 36%, rgba(12, 9, 31, 1) 87%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#24116a", endColorstr="#0c091f", GradientType=1);
+  background: transparent;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+.navbar-inner {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  background-color: #ffffff;
+  background: transparent;
+  font-family: Volkswagen-Bold;
+
+}
+
+h1{
+  background: transparent;
+  font-size: 60px !important;
+}
+
+p {
+  font-family: Volkswagen-Bold;
+  color: white !important;
+  display: flex;
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background-clip: initial;
+  background: transparent;
+  top: 8%;
+  font-size: 30px;
+}
+
+
+.clock{
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  float: right;
+  flex: 1;
+  margin-left: auto;
+  padding: 10px ;
+}
+
+#navbarSupportedContent{
+  position: relative !important;
+  flex: 1 !important; 
+}
+
+
+#nav1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 20px;
+}
+
+li {
+  list-style-type: none !important;
+}
+
+#datep{
+  padding-right: 15px;
+}
