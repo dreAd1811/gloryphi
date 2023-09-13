@@ -87,3 +87,29 @@ VANTA.HALO({
     size: 2.60
 })
 
+
+const apiUrl = "https://api.apiflash.com/v1/urltoimage";
+const accessKey = "e896a3e8a13248d18c49cf35edb6aaf5";
+const targetUrl = "https://example.com";
+
+const queryParams = new URLSearchParams({
+    access_key: accessKey,
+    url: targetUrl
+});
+
+const url = `${apiUrl}?${queryParams}`;
+
+fetch(url)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.headers.get('Location'); // Get the 'Location' header
+    })
+    .then(imageUrl => {
+        console.log('Image URL:', imageUrl);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+

@@ -24,6 +24,12 @@ app.get('/anime', (req, res) => {
   res.sendFile(__dirname + '/public/pages/anime/index.html');
 });
 
+// Route to the Random page 
+app.get('/tools', (req, res) => {
+  res.sendFile(__dirname + '/public/pages/tools/index.html');
+});
+
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
