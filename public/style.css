@@ -227,3 +227,11 @@ li {
 #datep{
   padding-right: 15px;
 }
+
+.navbar-inner{
+  width: 70%;
+}
+
+*,*::after,*::before{
+  cursor: none !important;
+}

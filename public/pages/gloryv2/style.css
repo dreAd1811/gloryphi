@@ -85,6 +85,10 @@
   
   }
   
+  .navbar-inner{
+    width: 70%;
+  }
+
   #main {
     display: flex;
     flex-direction: row;

@@ -212,6 +212,10 @@ p {
   padding-right: 20px;
 }
 
+.navbar-inner{
+  width: 70%;
+}
+
 li {
   list-style-type: none !important;
 }
