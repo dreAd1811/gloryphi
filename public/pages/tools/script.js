@@ -23,6 +23,7 @@ function shortenURL(longURL) {
         })
         .catch(error => {
             console.error('Error shortening URL:', error);
+            alert("Some error Occured")
         });
 }
 

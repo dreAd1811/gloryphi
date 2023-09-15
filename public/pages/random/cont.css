@@ -149,10 +149,7 @@
     background-clip: initial;
   }
   
-  .navbar {
-    padding-left: 40px !important;
-    gap: 450px;
-  }
+
   
   .gradient-custom {
     /* fallback for old browsers */
@@ -191,10 +188,32 @@
     background: transparent;
   }
 
+  #nav1{
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    border-radius: 20px;
+    align-items: center;
+  }
+  
+  
+  .navbar {
+    gap: 450px;
+  }
+  
   .navbar-inner{
-    width: 70%;
+    width: 100%;
+    gap: 10%;
+    justify-content: center;
+    padding-top: 2%;
   }
 
-  .navbar-brand{
-    font-size: 40px !important;
+  #nav1{
+    display: flex;
+    flex-direction: row;  
+    padding-right: 10px;
+    padding-left: 10px;
+    align-items: center;
   }
+  

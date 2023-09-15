@@ -132,3 +132,9 @@
     list-style-type: none !important;
   }
   
+  #main{
+    
+    height: auto;
+    padding-top: 7%;
+
+  }

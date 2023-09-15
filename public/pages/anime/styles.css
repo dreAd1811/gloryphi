@@ -17,9 +17,8 @@
     border-radius: 30px;
 }
 
-.navbar {
-    padding-left: 40px !important;
-    gap: 450px;
+.subsec1{
+    margin-top: 5% !important;
 }
 
 .navbar-inner {

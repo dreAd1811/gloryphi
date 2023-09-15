@@ -241,6 +241,7 @@
       color: black
       !important;
       gap: 1  0px;
+      margin: 100px;
   }
 
   img{
@@ -290,4 +291,34 @@
 
   *,*::after,*::before{
     cursor: none !important;
+  }
+
+  input::placeholder{
+    color: black !important;
+  }
+
+  .clock{
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  }
+
+  #nav1{
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    border-radius: 20px;
+  }
+  
+  
+  .navbar {
+    gap: 450px;
+  }
+  
+  .navbar-inner{
+    width: 100%;
+    gap: 10%;
+    justify-content: center;
+    padding-top: 2%;
   }

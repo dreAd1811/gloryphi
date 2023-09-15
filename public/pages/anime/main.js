@@ -89,7 +89,7 @@ const fetchData = async (searchText) => {
 
 const displayData = async () => {
     const animeList = document.getElementById("anime-list");
-    const maxDivs = 18; // Maximum number of div elements
+    const maxDivs = 12; // Maximum number of div elements
 
     try {
         const animeData = await fetchData(document.getElementById("inp").value);
