@@ -1,0 +1,25 @@
+{
+    "routes": [
+      {
+        "src": "/anime",
+        "dest": "/pages/anime/index.html"
+      },
+      {
+        "src": "/image-gen",
+        "dest": "/pages/gloryv2/index.html"
+      },
+      {
+        "src": "/random",
+        "dest": "/pages/random/index.html"
+      },
+      {
+        "src": "/tools",
+        "dest": "/pages/tools/index.html"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/pages/index.html"
+      }
+    ]
+  }
+  
