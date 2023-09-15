@@ -52,6 +52,7 @@ const fetchDataAndUpdateVideo = async () => {
             hls.loadSource(url1080p);
             hls.attachMedia(video);
         }
+        document.getElementById("my-video").style.opacity = "1";
         document.getElementById("error1").textContent = "";
     } catch (error) {
         console.error(error);

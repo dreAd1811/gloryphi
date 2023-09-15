@@ -247,3 +247,8 @@ li {
   padding-left: 10px;
   align-items: center;
 }
+
+video{
+  opacity: 0 ; /* Adjust the opacity value as needed */
+  background-color: transparent ;
+}
