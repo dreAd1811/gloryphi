@@ -1,0 +1,58 @@
+@font-face {
+    font-family: Volkswagen-Bold;
+    src: url(fonts/Volkswagen-Bold.ttf);
+  }
+
+.navbar{
+    border-radius: 20px !important;
+    backdrop-filter: blur(10px) !important;
+    background: rgba(255, 255, 255, 0.375) !important;
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1) !important;
+    width: fit-content;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent;
+}
+
+.nav-cont{
+    background:transparent;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: Volkswagen-Bold;
+}
+.clock{
+    margin-right: 13px;
+    background: transparent !important;
+    border-radius: 20px    ;
+}
+
+body{
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .navbar{
+        border-radius: 0px !important;
+        width: 100%;
+        gap: 0px;
+    }
+    .nav-cont{
+        margin-top: 0px;
+        font-family: Volkswagen-Bold;
+    }
+    .clock{
+        display: none;
+    }
+    .cursor{
+        display: none;
+    }
+    h1{
+        top: 2.6%;
+        height: auto;
+        top: 40% !important;
+    }
+  }

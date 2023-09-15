@@ -2,18 +2,6 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.use((req, res, next) => {
-  const userAgent = req.headers['user-agent'];
-  const isMobile = /Mobile|Android|iPhone|iPad|iPod|Windows Phone/i.test(userAgent);
-  
-  if (isMobile) {
-    // You can choose to respond with a message or redirect to a different page
-    res.sendFile(__dirname + '/public/mobile/index.html');
-  } else {
-    // Continue processing the request for non-mobile devices
-    next();
-  }
-});
 
 app.use(express.static('public'));
 

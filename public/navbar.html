@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="background/bg.css">
+        <link rel="stylesheet" href="nav.css">
+        <style>
+          html{
+            cursor: pointer !important;
+          }
+        </style>
+</head>
+<body style="cursor: pointer !important;">
+  <div class="nav-cont">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">GloryPhi</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active ">
+                <a class="nav-link " href="/" >Home</a>
+            </li>
+            <li class="nav-item active ">
+                <a class="nav-link" href="/random">Random Stuff</a>
+            </li>
+            <li class="nav-item active ">
+                <a class="nav-link" href="/image-gen">Image Generator</a>
+            </li>
+            <li class="nav-item active ">
+                <a class="nav-link" href="/anime">Anime</a>
+            </li>
+            <li class="nav-item active ">
+                <a class="nav-link" href="/tools">Tools</a>
+            </li>
+
+            </ul>
+
+          </div>
+          </div>
+          
+          <li class="nav-item active" style="align-items: center;">
+            <div class="clock">
+            <span id="datep">12/12/12</span>
+            <span id="hrs" class="nav-link">00</span>
+            <span class="nav-link">:</span>
+            <span id="min" class="nav-link">00</span>
+            <span class="nav-link">:</span>
+            <span id="sec" class="nav-link">00</span>
+        </li>  
+        </div>
+        
+      </nav>
+      
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
