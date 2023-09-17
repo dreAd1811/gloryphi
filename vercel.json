@@ -21,7 +21,7 @@
         "dest": "/pages/index.html"
       },
       {
-        "src": "/scrape/:userIP",
+        "src": "/scrape/:text",
         "dest": "/scrape"
       }
     ]
