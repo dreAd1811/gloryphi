@@ -19,6 +19,10 @@
       {
         "src": "/(.*)",
         "dest": "/pages/index.html"
+      },
+      {
+        "src": "/scrape/:userIP",
+        "dest": "/scrape"
       }
     ]
   }
