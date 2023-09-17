@@ -175,7 +175,7 @@
 
   }
 
-  h1{
+  h1 {
     background: transparent;
     font-size: 60px !important;
   }
@@ -191,23 +191,23 @@
   }
 
 
-  .clock{
+  .clock {
     display: flex;
     flex-direction: row;
     box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
     float: right;
     flex: 1;
     margin-left: auto;
-    padding: 10px ;
+    padding: 10px;
   }
 
-  #navbarSupportedContent{
+  #navbarSupportedContent {
     position: relative !important;
-    flex: 1 !important; 
+    flex: 1 !important;
   }
 
 
-  #nav1{
+  #nav1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -219,53 +219,53 @@
     list-style-type: none !important;
   }
 
-  #datep{
+  #datep {
     padding-right: 15px;
   }
 
 
-  .container{
-      top: 15% !important;
-      display: flex;
-      flex-direction: column;
-      height: 100 !important;
-      width: 20% !important;
-      backdrop-filter: blur(10px);
-      background: rgba(255, 255, 255, 0.375);
-      box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
-          position: absolute; 
-      padding: 30px;
-      outline: none;
-      border-radius: 30px;
-      align-items: center;
-      color: black
-      !important;
-      gap: 1  0px;
-      margin: 100px;
+  .container {
+
+    display: flex;
+    flex-direction: column;
+    height: fit-content !important;
+    width: 20% !important;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    position: absolute;
+    padding: 30px;
+    outline: none;
+    border-radius: 30px;
+    align-items: center;
+    color: black !important;
+    gap: 1 0px;
+    margin: 100px;
+    position: relative;
   }
 
-  img{
-      outline: none;
-      border: none;
+  img {
+    outline: none;
+    border: none;
   }
 
-  .main2{
-      height: 100%;
-      width: 100%;
-      top: 10%;
-      background-image: url("https://wallpapercave.com/wp/wp12412300.jpg");
-      background-position: center;
-      background-size: 100%;
-      align-items: center;
-      display: flex;
-      justify-content: center;
+  .main2 {
+    height: 100%;
+    width: 100%;
+    top: 10%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    display: flex;
+    justify-content: center;
   }
 
-  *{
-      font-family: Volkswagen-Bold;
+  * {
+    font-family: Volkswagen-Bold;
   }
 
-  input{
+  input {
     border-radius: 20px;
     background: none;
     outline: none;
@@ -275,50 +275,137 @@
     margin-bottom: 30px !important;
   }
 
-  button{
+  button {
     width: 140px !important;
     align-items: center;
     justify-content: center;
     border-radius: 20px !important;
     border: 2px solid white;
-    
+
   }
 
-  .navbar-inner{
+  .navbar-inner {
     width: 70%;
   }
 
 
-  *,*::after,*::before{
+  *,
+  *::after,
+  *::before {
     cursor: none !important;
   }
 
-  input::placeholder{
+  input::placeholder {
     color: black !important;
   }
 
-  .clock{
+  .clock {
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.375);
     box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
   }
 
-  #nav1{
+  #nav1 {
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.375);
     box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
     width: fit-content;
     border-radius: 20px;
   }
-  
-  
+
+
   .navbar {
     gap: 450px;
   }
-  
-  .navbar-inner{
+
+  .navbar-inner {
     width: 100%;
     gap: 10%;
     justify-content: center;
     padding-top: 2%;
   }
+
+  .heading {
+    font-size: 2rem;
+    padding-bottom: 20px;
+  }
+
+  .res {
+    font-size: 1.3rem;
+    padding-bottom: 20px !important;
+  }
+
+  @media only screen and (max-device-width: 480px) {
+
+    body {
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .heading {
+      font-size: 1rem;
+      padding-bottom: 10px;
+    }
+    span{
+      font-size: 0.8rem;
+    }
+    button{
+      width: fit-content !important;
+    }
+    input{
+      width: 100px !important;
+    }
+    .main2{
+      gap: 10px ;
+      align-items: stretch;
+    }
+    .container{
+      width: 160px !important;
+      height: fit-content !important;
+    }
+    
+
+  }
+
+  nav {
+    background: transparent;
+    position: relative;
+  }
+
+  .main2 {
+    height: 100%;
+  }
+
+  body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+    
+}
+

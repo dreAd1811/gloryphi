@@ -48,7 +48,7 @@ body{
         display: none;
     }
     .cursor{
-        display: none;
+        display: none !important;
     }
     h1{
         top: 2.6%;

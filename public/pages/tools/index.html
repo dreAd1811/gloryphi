@@ -6,78 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GloryPhi Tools</title>
     <link rel="stylesheet" href="cursor/cursor.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="/pages/tools/style.css">
+    <link rel="stylesheet" href="/nav.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
 </head>
 
 <body>
     <div class="cursor"></div>
-    <nav
-        class="navbar transparent fixed-top gradient-custom justify-content-center navbar-expand-lg  p-2  bg-transparent">
-        <nav class="navbar-inner">
-            <div id="nav1" style="align-items: center;">
-            <nav class="navbar">
-                <a class="navbar-brand text-gradient" href="/">
-                    GloryPhi
-                </a>
-            </nav>
+    <div class="nav-cont">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand text-gradient" href="#">GloryPhi</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <div id="coll">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active text-gradient">
-                                <a class="nav-link text-gradient" href="/">Home</a>
-                            </li>
-                            <li class="nav-item active text-gradient">
-                                <a class="nav-link" href="/random">Random Stuff</a>
-                            </li>
-                            <li class="nav-item active text-gradient">
-                                <a class="nav-link" href="/image-gen">Image Generator</a>
-                            </li>
-                            <li class="nav-item active text-gradient">
-                                <a class="nav-link" href="/anime">Anime</a>
-                            </li>
-                            <li class="nav-item active text-gradient">
-                                <a class="nav-link" href="/tools">Tools</a>
-                            </li>
-                    </div>
+                <div class="collapse navbar-collapse text-gradient" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active ">
+                            <a class="nav-link " href="/">Home</a>
+                        </li>
+                        <li class="nav-item active ">
+                            <a class="nav-link" href="/random">Random Stuff</a>
+                        </li>
+                        <li class="nav-item active ">
+                            <a class="nav-link" href="/image-gen">Image Generator</a>
+                        </li>
+                        <li class="nav-item active ">
+                            <a class="nav-link" href="/anime">Anime</a>
+                        </li>
+                        <li class="nav-item active ">
+                            <a class="nav-link" href="/tools">Tools</a>
+                        </li>
+
+                    </ul>
 
                 </div>
             </div>
-            <li class="nav-item active text-gradient">
-                <div class="clock">
+
+            <li class="nav-item active text-gradient" style="align-items: center;">
+                <div class="clock ">
                     <span id="datep">12/12/12</span>
                     <span id="hrs" class="nav-link">00</span>
                     <span class="nav-link">:</span>
                     <span id="min" class="nav-link">00</span>
                     <span class="nav-link">:</span>
                     <span id="sec" class="nav-link">00</span>
-
             </li>
-            </ul>
+    </div>
 
-            </div>
-            </div>
-        </nav>
-    </nav>
+
     <div class="main2">
-    <div class="container" style="width: 530px;; height: auto; top: 10%;">
-        <p id="heading">Web Screenshot</p>
-        <span style="text-align: center;">Know about the page Without Opening it</span>
-        <br>
-    <p id="outp5"></p>
-    <input type="text" name="" id="text" placeholder="Enter URL " style="color: black;">
+<!-- Web SS -->
+        <div class="container" style="width: 530px;; height: auto; top: 10%;">
+            <span class="heading">Web Screenshot</span>
+            <span style="text-align: center;">Know about the page Without Opening it</span>
+            <br>
+            <span style="font-size: 1.3rem;" id="outp5"></span>
+            <input type="text" name="" id="text" placeholder="Enter URL " style="color: black;">
 
-    <button onclick="getSS();"> CLICK </button>
-</div>
-</div>
+            <button onclick="getSS();"> CLICK </button>
+        </div>
+<!-- Fraud Check  -->
+        <div class="container" style="width: 530px;; height: auto; top: 10%;">
+            <span class="heading">Fraud IP Score</span>
+            <span style="text-align: center;">Know Fraud score of your IP! Lower is better</span>
+            <br>
+            <div id="result">
+                <span class="res"></span>
+            </div>
+              <button id="scrapeButton"> Send</button>
+        </div>
+
+    </div>
+
 </body>
 <script src="/pages/tools/script.js"></script>
 <script src="cursor/cursor.js"></script>
 <script src="script.js"></script>
+
 </html>
