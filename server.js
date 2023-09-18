@@ -7,6 +7,16 @@ const app = express();
 const port = 4000;
 
 
+// Enable CORS to allow requests from all domains
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  // You can also specify more CORS headers as needed
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
+
+
 app.use(express.static('public'));
 
 // Route to the home page (index.html)

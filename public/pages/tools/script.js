@@ -36,7 +36,7 @@ function shortenURL(longURL) {
 //         if (response.ok) {
 //           const data = await response.json();
 //           return data.ip;
-          
+
 //         } else {
 //           console.error('Failed to fetch user IP.');
 //           return null;
@@ -47,7 +47,7 @@ function shortenURL(longURL) {
 //       }
 //     }
 
-   
+
 //     // Function to fetch data from the server and display it
 //     async function fetchData() {
 //       try {
@@ -74,12 +74,12 @@ function shortenURL(longURL) {
 //         console.error('Error:', error.message);
 //       }
 //     }
-    
+
 
 //     // Attach click event listener to the button
 //     document.getElementById('scrapeButton').addEventListener('click', fetchData);
 
-    
+
 
 //     let globalIP; // Global variable to store the IP address
 
@@ -118,7 +118,7 @@ function shortenURL(longURL) {
 //   .then(ip => {
 //     if (ip) {
 //       console.log(`Your public IP address is: ${ip}`);
-      
+
 //       // Fetch data using JSONP
 //       fetchDataUsingJSONP(ip);
 //     } else {
@@ -127,17 +127,46 @@ function shortenURL(longURL) {
 //   });
 
 
-document.getElementById("scrapeButton").addEventListener("click", () => {
-  // When the button is clicked, make an HTTP request to your Express server.
-  fetch("/call-python-script")
-      .then(response => response.json())
-      .then(data => {
-          // Handle the response data as needed.
-          console.log(data);
-          // You can update the DOM with the data or perform any other actions here.
-      })
-      .catch(error => {
-          console.error("An error occurred:", error);
-          // Handle errors here.
-      });
-});
+
+
+// Define a global variable to store the IP address
+let clientIp;
+
+function fetchData() {
+    if (clientIp) {
+        const url = `https://gloryphi.cyclic.cloud/scrape/${clientIp}`;
+
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                console.log('Fetched Data:', data);
+                // You can process the fetched data here
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    } else {
+        console.log('Client IP Address is not available yet.');
+    }
+}
+
+
+
+// Function to get the client's IP address
+function getClientIpAddress() {
+    fetch('https://api64.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            clientIp = data.ip; // Save the IP address globally
+            console.log(`Client IP Address: ${clientIp}`);
+            // Call the function to fetch data after getting the IP address
+            fetchData();
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+
+
+document.getElementById('scrapeButton').addEventListener('click', getClientIpAddress);
