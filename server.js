@@ -89,20 +89,6 @@ app.post('/saveIpAddress', (req, res) => {
   res.sendStatus(200); // Send a success response
 });
 
-app.get("/call-python-script", (req, res) => {
-  const pythonProcess = spawn("python", ["call_api.py"]);
-
-  pythonProcess.stdout.on("data", (data) => {
-    const result = JSON.parse(data.toString());
-    res.json(result);
-  });
-
-  pythonProcess.stderr.on("data", (data) => {
-    console.error(`Python script error: ${data}`);
-    res.status(500).json({ error: "Internal server error" });
-  });
-});
-
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
