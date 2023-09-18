@@ -2,8 +2,9 @@ const express = require('express');
 const axios = require('axios');
 const path = require('path');
 const { JSDOM } = require('jsdom');
+const { spawn } = require("child_process");
 const app = express();
-const port = 3000;
+const port = 4000;
 
 
 app.use(express.static('public'));
@@ -65,6 +66,31 @@ app.get('/scrape/:text', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'Error scraping website' });
   }
+});
+
+app.use(express.json()); // Middleware for parsing JSON request bodies
+app.enable('trust proxy'); // Enables reverse proxy support
+
+// Endpoint to save IP address
+app.post('/saveIpAddress', (req, res) => {
+  const userIpAddress = req.ip;
+  // Here, you can save the IP address to your database or perform any other desired action.
+  console.log(`Received IP address: ${userIpAddress}`);
+  res.sendStatus(200); // Send a success response
+});
+
+app.get("/call-python-script", (req, res) => {
+  const pythonProcess = spawn("python", ["call_api.py"]);
+
+  pythonProcess.stdout.on("data", (data) => {
+    const result = JSON.parse(data.toString());
+    res.json(result);
+  });
+
+  pythonProcess.stderr.on("data", (data) => {
+    console.error(`Python script error: ${data}`);
+    res.status(500).json({ error: "Internal server error" });
+  });
 });
 
 

@@ -14,6 +14,8 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>GloryPhi</title>
 </head>
 
@@ -70,6 +72,45 @@
             <p class="text-gradient"> A Cool website :)</p>
         </div>
     </div>
+    <script>
+        // Function to send the IP address to the server
+        function sendIpAddress() {
+            fetch('/saveIpAddress', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ ip: getClientIp() }),
+            })
+                .then(response => {
+                    if (response.status === 200) {
+                        console.log('IP address sent successfully.');
+                    } else {
+                        console.error('Failed to send IP address.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        // Function to get the user's IP address
+        function getClientIp() {
+            // This uses a public IP address lookup service (replace with your preferred service)
+            return fetch('https://api64.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => data.ip)
+                .catch(error => {
+                    console.error('Error getting IP address:', error);
+                    return 'Unknown';
+                });
+        }
+
+        // Call the sendIpAddress function when the page loads
+        window.onload = sendIpAddress;
+    </script>
+
+
 
 </body>
 <script src="script.js"></script>
