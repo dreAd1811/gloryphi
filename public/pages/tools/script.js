@@ -75,3 +75,48 @@ function getClientIpAddress() {
 
 
 document.getElementById('scrapeButton').addEventListener('click', getClientIpAddress);
+
+// Github First Commit 
+
+var inputUrl;
+var updatedUrl;
+
+function getFirstCommit() {
+  function firstCommit(url) {
+    var commits = document.getElementById("numberg").value;
+    var no = commits - 34;
+    var modifiedCommits = "+" + no; // Save the modified commits
+    var modifiedUrl = url.replace(/\+34/g, modifiedCommits);
+    console.log("Modified Commits: " + modifiedCommits); // Log the modified commits
+    return modifiedUrl;
+  }
+
+  inputUrl = document.getElementById("textg").value;
+  updatedUrl = firstCommit(inputUrl);
+
+  // Shorten the URL using the TinyURL API
+  shortenUrlGit(updatedUrl);
+}
+
+function shortenUrlGit(url) {
+  // Define the TinyURL API endpoint
+  var apiUrl = "https://tinyurl.com/api-create.php?url=" + encodeURIComponent(url);
+
+  // Make an HTTP GET request to the TinyURL API
+  fetch(apiUrl)
+    .then(function(response) {
+      return response.text();
+    })
+    .then(function(shortenedUrl) {
+      console.log("Shortened URL: " + shortenedUrl);
+      document.getElementById("outp6").textContent = shortenedUrl; // Display the shortened URL
+    })
+    .catch(function(error) {
+      document.getElementById("outp6").textContent = "Error"
+    });
+}
+
+
+
+
+
